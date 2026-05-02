@@ -1,0 +1,10 @@
+/* style general */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial;
+  color: #333;
+}
