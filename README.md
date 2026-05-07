@@ -1,88 +1,73 @@
-# DevStart Agency — Site Web
+# NexaLab — Document d'Architecture
 
-**Bloc 2 · Module 2 — Architecture logicielle & modularité**  
-Académie de Programmation IFRI · L1 Informatique · Groupe 1 · Avril 2026
-
----
-
-## 📌 À propos de ce dépôt
-
-Ce dépôt contient le site vitrine de **DevStart Agency**, une agence web fictive utilisée comme support pédagogique dans le cadre du Bloc 2 · Module 2 de l'Académie de Programmation IFRI.
-
-### Branches
-
-| Branche | Contenu |
-|---|---|
-| `main` | Code original du Module 1 — tel que livré par le stagiaire (non modifié) |
-| `module2` | Code réorganisé selon l'architecture modulaire conçue par le Groupe 1 |
-
-> ⚠️ La branche `main` ne doit pas être modifiée. Elle sert de référence pour comparer l'avant et l'après.
+**Projet Intégrateur · Bloc 2 · Modules 3 & 4**  
+Académie de Programmation IFRI · L1 Informatique · Groupe 1 · Mai 2026
 
 ---
 
-## 🗂️ Structure du projet (branche `module2`)
+## Présentation du projet
+
+NexaLab est un laboratoire fictif d'innovation technologique pour les entreprises africaines. Ce dépôt contient la page d'accueil complète conçue et développée par le Groupe 1 dans le cadre du Projet Intégrateur du Bloc 2.
+
+**Contraintes techniques respectées :** HTML & CSS uniquement · Architecture modulaire · HTML5 sémantique · Responsive design · Flexbox · Aucun JavaScript · Aucun framework.
+
+---
+
+## Structure du dépôt
 
 ```
-devstart/
+nexalab/
 │
-├── index.html                  ← Page d'accueil (inchangée visuellement)
+├── index.html                ← Page d'accueil (9 sections obligatoires)
 │
 ├── styles/
-│   ├── base.css                ← Reset universel + styles globaux (*, body)
-│   ├── header.css              ← Barre de navigation (.b1, .b1a, .b1b)
-│   ├── hero.css                ← Section d'accueil (.c, .c1, .c2...)
-│   ├── services.css            ← Section services (.d, .dd, cartes)
-│   ├── about.css               ← Section À propos (.e, .e1, .e2...)
-│   ├── testimonials.css        ← Section témoignages (.f, .ff, cartes)
-│   ├── contact.css             ← Formulaire de contact (.g, .gi, .gt, .gb)
-│   ├── footer.css              ← Pied de page (.h, .h1, .h2, .h3)
-│   │
-│   └── components/
-│       ├── buttons.css         ← Tous les boutons du site (.btn, .btn-primary, .btn-dark)
-│       └── cards.css           ← Squelette structurel commun des cartes (.card)
-│
-├── pages/                      ← Futures pages prévues (non encore développées)
-│   ├── portfolio.html
-│   ├── blog.html
-│   └── espace-client.html
+│   ├── base.css              ← Reset + variables CSS + typographie globale
+│   ├── header.css            ← Navigation principale (.header, .nav)
+│   ├── hero.css              ← Section d'accroche (.hero)
+│   ├── about.css             ← Section À propos (.about)
+│   ├── services.css          ← Section Services (.services, .service-card)
+│   ├── stats.css             ← Chiffres clés (.stats, .stat-card)
+│   ├── team.css              ← Section Équipe (.team, .team-card)
+│   ├── testimonials.css      ← Témoignages (.testimonials, .testimonial-card)
+│   ├── contact.css           ← Formulaire de contact (.contact, .form-group)
+│   └── footer.css            ← Pied de page (.footer)
 │
 └── assets/
-    └── images/
-        ├── hero.png
-        └── team.png
+    ├── images/               ← Images libres de droits (Unsplash / Pexels)
+    └── icons/                ← Icônes SVG
 ```
 
 ---
 
-## 🧩 Principe d'architecture
+## Tableau des responsabilités CSS
 
-Ce module applique la **règle d'une responsabilité par fichier** :
-
-> _Si tu dois expliquer ce que fait un fichier et que ta réponse contient le mot « et », c'est qu'il fait trop de choses._
-
-**Avant (Module 1)** — un seul `style.css` de ~200 lignes gérait simultanément la navigation, le hero, les cartes, les témoignages, le formulaire et le footer.
-
-**Après (Module 2)** — 10 fichiers CSS, chacun avec une seule responsabilité claire.
+| Fichier | Responsabilité | Éléments gérés |
+|---|---|---|
+| `base.css` | Socle commun à toute la page | Reset `*`, variables `:root`, `body`, `img`, `a`, `ul` |
+| `header.css` | Barre de navigation | `.header`, `.nav`, `.nav__logo`, `.nav__links`, `.nav__cta`, `.nav__burger` |
+| `hero.css` | Section d'accroche principale | `.hero`, `.hero__content`, `.hero__title`, `.hero__subtitle`, `.hero__cta`, `.hero__visual` |
+| `about.css` | Section À propos / Mission | `.about`, `.about__content`, `.about__text`, `.about__visual`, `.about__title`, `.about__description` |
+| `services.css` | Section Services / Expertises | `.services`, `.services__header`, `.services__grid`, `.service-card`, `.service-card__icon`, `.service-card__title`, `.service-card__description` |
+| `stats.css` | Section Chiffres clés | `.stats`, `.stats__grid`, `.stat-card`, `.stat-card__number`, `.stat-card__label` |
+| `team.css` | Section Équipe | `.team`, `.team__header`, `.team__grid`, `.team-card`, `.team-card__avatar`, `.team-card__name`, `.team-card__role` |
+| `testimonials.css` | Section Témoignages | `.testimonials`, `.testimonials__header`, `.testimonials__grid`, `.testimonial-card`, `.testimonial-card__quote`, `.testimonial-card__author` |
+| `contact.css` | Formulaire de contact | `.contact`, `.contact__content`, `.contact__form`, `.form-group`, `input`, `textarea`, `.contact__submit` |
+| `footer.css` | Pied de page | `.footer`, `.footer__top`, `.footer__brand`, `.footer__nav`, `.footer__social`, `.footer__contact`, `.footer__bottom` |
 
 ---
 
-## 📂 Ordre de chargement des CSS dans `index.html`
+## Ordre de chargement dans `index.html`
 
-L'ordre des balises `<link>` est critique. Le navigateur lit le CSS de haut en bas — `base.css` et les composants doivent être déclarés avant les fichiers de section.
+L'ordre des `<link>` est intentionnel : `base.css` est chargé en premier car il définit les variables CSS utilisées par tous les autres fichiers.
 
 ```html
-<!-- 1. Socle global -->
 <link rel="stylesheet" href="styles/base.css">
-
-<!-- 2. Composants réutilisables -->
-<link rel="stylesheet" href="styles/components/buttons.css">
-<link rel="stylesheet" href="styles/components/cards.css">
-
-<!-- 3. Sections de la page -->
 <link rel="stylesheet" href="styles/header.css">
 <link rel="stylesheet" href="styles/hero.css">
-<link rel="stylesheet" href="styles/services.css">
 <link rel="stylesheet" href="styles/about.css">
+<link rel="stylesheet" href="styles/services.css">
+<link rel="stylesheet" href="styles/stats.css">
+<link rel="stylesheet" href="styles/team.css">
 <link rel="stylesheet" href="styles/testimonials.css">
 <link rel="stylesheet" href="styles/contact.css">
 <link rel="stylesheet" href="styles/footer.css">
@@ -90,57 +75,69 @@ L'ordre des balises `<link>` est critique. Le navigateur lit le CSS de haut en b
 
 ---
 
-## ♻️ Composants réutilisables
+## Identité visuelle
 
-### `components/buttons.css`
-
-Trois boutons existent dans le code, répartis dans trois sections différentes. Ils partagent la même logique (fond coloré, texte blanc, bold, border-radius). `buttons.css` centralise ce style pour éviter la duplication.
-
-```css
-.btn          { color: white; font-weight: bold; padding: 14px 32px; border-radius: 6px; }
-.btn-primary  { background: #e94560; }
-.btn-dark     { background: #1a1a2e; }
-```
-
-### `components/cards.css`
-
-Les cartes Services et Témoignages partagent le même squelette (bloc arrondi, padding). `cards.css` définit la structure ; chaque fichier de section surcharge uniquement la couleur.
-
-```css
-/* cards.css — squelette commun */
-.card { padding: 28px; border-radius: 10px; }
-
-/* services.css — surcharge couleur */
-.service-card { background: #f4f4f4; }
-
-/* testimonials.css — surcharge couleur */
-.testimonial-card { background: #16213e; }
-```
-
----
-
-## 🚀 Stratégie d'évolution — Futures pages
-
-Les futures pages (Portfolio, Blog, Espace Client) n'ont pas besoin de réécrire les styles communs. Elles lient simplement les fichiers partagés et ajoutent uniquement leurs styles spécifiques.
-
-| Page | Fichiers partagés réutilisés | Fichier spécifique |
+| Élément | Valeur | Justification |
 |---|---|---|
-| `portfolio.html` | base, header, footer, buttons, cards | `styles/portfolio.css` |
-| `blog.html` | base, header, footer, buttons | `styles/blog.css` |
-| `espace-client.html` | base, header, footer, buttons | `styles/espaceclient.css` |
+| Fond principal | `#0a0a14` | Sombre profond — identité tech, sérieux |
+| Surface carte | `#12122a` / `#1a1a35` | Profondeur visuelle sans contraste brutal |
+| Accent principal | `#6c63ff` | Violet électrique — modernité, innovation |
+| Accent secondaire | `#00d4aa` | Turquoise — dynamisme, Afrique contemporaine |
+| Texte principal | `#e8e8f0` | Blanc cassé — lecture confortable sur fond sombre |
+| Texte secondaire | `#8888aa` | Gris bleuté — hiérarchie visuelle claire |
 
-**Règle :** tout ce qui est commun à plusieurs pages reste dans `styles/`. Tout ce qui est spécifique à une page va dans un fichier propre à cette page.
-
----
-
-## ✅ Vérification
-
-La page doit rester **visuellement identique** à celle du Module 1 après la réorganisation. Si quelque chose casse visuellement, c'est une erreur de chemin dans un `<link>` ou une règle CSS oubliée dans le découpage.
-
-Pour vérifier : ouvrir `index.html` dans le navigateur et comparer section par section avec la version `main`.
+**Typographie :** `Segoe UI` / `system-ui` — natif, performant, lisible à toutes les tailles.
 
 ---
 
-## 👥 Groupe 1
+## Convention de nommage BEM
 
-Académie de Programmation IFRI · L1 Informatique · Avril 2026
+Toutes les classes suivent la convention **BEM** (Block__Element--Modifier) :
+
+```
+.section          ← Bloc
+.section__title   ← Élément du bloc
+.section__title--large  ← Modificateur (si variation)
+```
+
+Exemples concrets dans ce projet :
+- `.nav__logo`, `.nav__links`, `.nav__cta`
+- `.service-card__icon`, `.service-card__title`
+- `.testimonial-card__quote`, `.testimonial-card__author`
+
+---
+
+## Extensibilité — Ajouter une nouvelle page
+
+Pour ajouter une page (ex: `portfolio.html`) :
+
+1. Créer `nexalab/portfolio.html`
+2. Lier `base.css`, `header.css`, `footer.css` (communs à toutes les pages)
+3. Créer `styles/portfolio.css` pour les styles spécifiques à cette page uniquement
+4. Ne jamais modifier les fichiers existants pour les besoins d'une seule page
+
+```html
+<!-- portfolio.html — liens CSS -->
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/header.css">
+<link rel="stylesheet" href="styles/footer.css">
+<link rel="stylesheet" href="styles/portfolio.css">
+```
+
+**Règle :** ce qui est commun à plusieurs pages reste dans `styles/`. Ce qui est spécifique à une page va dans son propre fichier.
+
+---
+
+## Branches du dépôt
+
+| Branche | Contenu |
+|---|---|
+| `main` | Code original du stagiaire — Module 1 (non modifié) |
+| `module2` | Architecture modulaire DevStart — Module 2 |
+| `projet-integrateur` | Site NexaLab complet — Modules 3 & 4 |
+
+---
+
+## Groupe 1
+
+Académie de Programmation IFRI · L1 Informatique · Mai 2026

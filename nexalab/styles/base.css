@@ -1,0 +1,99 @@
+/* ============================================================
+   base.css — Reset universel, variables CSS, typographie globale
+   Responsabilité : tout ce qui s'applique à l'ensemble du site
+   ============================================================ */
+
+/* --- Variables globales --- */
+:root {
+  /* Palette */
+  --color-bg:         #0a0a14;
+  --color-surface:    #12122a;
+  --color-surface-2:  #1a1a35;
+  --color-accent:     #6c63ff;
+  --color-accent-2:   #00d4aa;
+  --color-text:       #e8e8f0;
+  --color-text-muted: #8888aa;
+  --color-border:     #2a2a4a;
+  --color-white:      #ffffff;
+
+  /* Typographie */
+  --font-main:    'Segoe UI', system-ui, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.75rem;
+  --font-size-4xl: 3.5rem;
+
+  /* Espacements */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2.5rem;
+  --space-xl:  4rem;
+  --space-2xl: 6rem;
+
+  /* Bordures */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Transitions */
+  --transition: 0.25s ease;
+
+  /* Largeur max contenu */
+  --max-width: 1200px;
+}
+
+/* --- Reset universel --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* --- Utilitaire conteneur --- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}

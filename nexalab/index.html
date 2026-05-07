@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexaLab — Innovation Technologique</title>
+
+  <!-- 1. Socle global -->
+  <link rel="stylesheet" href="styles/base.css">
+
+  <!-- 2. Sections -->
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/about.css">
+  <link rel="stylesheet" href="styles/services.css">
+  <link rel="stylesheet" href="styles/stats.css">
+  <link rel="stylesheet" href="styles/team.css">
+  <link rel="stylesheet" href="styles/testimonials.css">
+  <link rel="stylesheet" href="styles/contact.css">
+  <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+
+  <!-- ========================================
+       01 — HEADER & NAVIGATION
+       ======================================== -->
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="nav__logo">Nexa<span>Lab</span></a>
+      <ul class="nav__links">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#stats">Chiffres</a></li>
+        <li><a href="#team">Équipe</a></li>
+        <li><a href="#testimonials">Témoignages</a></li>
+        <li><a href="#contact" class="nav__cta">Nous contacter</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Menu">&#9776;</button>
+    </nav>
+  </header>
+
+  <!-- ========================================
+       02 — HERO SECTION
+       ======================================== -->
+  <section class="hero" id="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">L'innovation technologique<br>au service de l'Afrique</h1>
+      <p class="hero__subtitle">NexaLab conçoit des solutions numériques sur mesure pour les entreprises africaines qui veulent aller plus loin.</p>
+      <a href="#contact" class="hero__cta">Démarrer un projet</a>
+    </div>
+    <div class="hero__visual">
+      <!-- Placeholder visuel -->
+    </div>
+  </section>
+
+  <!-- ========================================
+       03 — À PROPOS / MISSION
+       ======================================== -->
+  <section class="about" id="about">
+    <div class="about__content">
+      <div class="about__text">
+        <h2 class="about__title">Qui sommes-nous ?</h2>
+        <p class="about__description">
+          NexaLab est un laboratoire d'innovation fondé par des ingénieurs africains, pour les défis africains. 
+          Nous combinons rigueur technique et compréhension du terrain pour livrer des solutions qui fonctionnent vraiment.
+        </p>
+        <p class="about__description">
+          Notre mission : démocratiser l'accès aux technologies avancées — IA, IoT, Data — 
+          pour les entreprises du continent qui veulent transformer leur secteur.
+        </p>
+      </div>
+      <div class="about__visual">
+        <img src="assets/images/team.png" alt="L'équipe NexaLab">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       04 — SERVICES / EXPERTISES
+       ======================================== -->
+  <section class="services" id="services">
+    <div class="services__header">
+      <h2 class="services__title">Nos expertises</h2>
+      <p class="services__subtitle">Des solutions adaptées aux enjeux réels des entreprises africaines.</p>
+    </div>
+    <div class="services__grid">
+
+      <article class="service-card">
+        <div class="service-card__icon">🤖</div>
+        <h3 class="service-card__title">Intelligence Artificielle</h3>
+        <p class="service-card__description">Modèles prédictifs, automatisation intelligente et systèmes de recommandation adaptés à vos données.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card__icon">📡</div>
+        <h3 class="service-card__title">IoT & Systèmes embarqués</h3>
+        <p class="service-card__description">Capteurs, réseaux connectés et dashboards temps réel pour piloter vos actifs physiques à distance.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card__icon">📊</div>
+        <h3 class="service-card__title">Data & Analytics</h3>
+        <p class="service-card__description">Collecte, traitement et visualisation de données pour des décisions fondées sur les faits.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card__icon">🌐</div>
+        <h3 class="service-card__title">Développement Web</h3>
+        <p class="service-card__description">Applications web performantes, interfaces utilisateur soignées et architectures robustes.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card__icon">🔒</div>
+        <h3 class="service-card__title">Cybersécurité</h3>
+        <p class="service-card__description">Audit, protection et conformité pour sécuriser vos systèmes et données sensibles.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card__icon">☁️</div>
+        <h3 class="service-card__title">Cloud & Infrastructure</h3>
+        <p class="service-card__description">Migration, déploiement et gestion d'infrastructures cloud scalables et économiques.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ========================================
+       05 — CHIFFRES CLÉS
+       ======================================== -->
+  <section class="stats" id="stats">
+    <div class="stats__grid">
+
+      <div class="stat-card">
+        <span class="stat-card__number">120+</span>
+        <span class="stat-card__label">Projets livrés</span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-card__number">14</span>
+        <span class="stat-card__label">Pays couverts</span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-card__number">48</span>
+        <span class="stat-card__label">Partenaires actifs</span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-card__number">98%</span>
+        <span class="stat-card__label">Clients satisfaits</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================
+       06 — ÉQUIPE
+       ======================================== -->
+  <section class="team" id="team">
+    <div class="team__header">
+      <h2 class="team__title">Notre équipe</h2>
+      <p class="team__subtitle">Des experts pluridisciplinaires unis par une même ambition.</p>
+    </div>
+    <div class="team__grid">
+
+      <article class="team-card">
+        <div class="team-card__avatar"></div>
+        <h3 class="team-card__name">Kofi Mensah</h3>
+        <p class="team-card__role">Directeur Technique</p>
+      </article>
+
+      <article class="team-card">
+        <div class="team-card__avatar"></div>
+        <h3 class="team-card__name">Amina Diallo</h3>
+        <p class="team-card__role">Lead Data Scientist</p>
+      </article>
+
+      <article class="team-card">
+        <div class="team-card__avatar"></div>
+        <h3 class="team-card__name">Seun Adebayo</h3>
+        <p class="team-card__role">Ingénieur IoT</p>
+      </article>
+
+      <article class="team-card">
+        <div class="team-card__avatar"></div>
+        <h3 class="team-card__name">Fatou Ndiaye</h3>
+        <p class="team-card__role">Responsable Design</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ========================================
+       07 — TÉMOIGNAGES
+       ======================================== -->
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials__header">
+      <h2 class="testimonials__title">Ce que disent nos clients</h2>
+    </div>
+    <div class="testimonials__grid">
+
+      <article class="testimonial-card">
+        <p class="testimonial-card__quote">
+          "NexaLab a transformé notre chaîne logistique en 3 mois. Le ROI a dépassé toutes nos projections."
+        </p>
+        <footer class="testimonial-card__author">
+          <strong>Jean-Marc Ahoussou</strong>
+          <span>Directeur Opérations, LogiAfrik</span>
+        </footer>
+      </article>
+
+      <article class="testimonial-card">
+        <p class="testimonial-card__quote">
+          "Une équipe qui comprend vraiment les contraintes du terrain africain. Rare et précieux."
+        </p>
+        <footer class="testimonial-card__author">
+          <strong>Nadia Ouédraogo</strong>
+          <span>CEO, FinTech Sahel</span>
+        </footer>
+      </article>
+
+      <article class="testimonial-card">
+        <p class="testimonial-card__quote">
+          "Le dashboard IoT livré par NexaLab nous permet de piloter 200 capteurs depuis un seul écran."
+        </p>
+        <footer class="testimonial-card__author">
+          <strong>Kwame Asante</strong>
+          <span>DSI, AgroConnect Ghana</span>
+        </footer>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ========================================
+       08 — FORMULAIRE DE CONTACT
+       ======================================== -->
+  <section class="contact" id="contact">
+    <div class="contact__content">
+      <div class="contact__intro">
+        <h2 class="contact__title">Démarrons ensemble</h2>
+        <p class="contact__description">
+          Un projet en tête ? Une question ? Envoyez-nous un message — notre équipe vous répond sous 24h.
+        </p>
+      </div>
+      <form class="contact__form" action="#" method="POST">
+        <div class="form-group">
+          <label for="name">Nom complet</label>
+          <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Adresse email</label>
+          <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Sujet</label>
+          <input type="text" id="subject" name="subject" placeholder="Objet de votre message" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou votre besoin..." required></textarea>
+        </div>
+        <button type="submit" class="contact__submit">Envoyer le message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========================================
+       09 — FOOTER
+       ======================================== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="#" class="footer__logo">Nexa<span>Lab</span></a>
+        <p class="footer__tagline">L'innovation technologique au service de l'Afrique.</p>
+      </div>
+      <nav class="footer__nav">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Équipe</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer__social">
+        <h4>Réseaux sociaux</h4>
+        <ul>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter / X</a></li>
+          <li><a href="#">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h4>Contact</h4>
+        <p>hello@nexalab.africa</p>
+        <p>Abidjan · Lagos · Dakar</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 NexaLab. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
