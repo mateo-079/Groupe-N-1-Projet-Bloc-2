@@ -6,6 +6,14 @@
 .about {
    background-color: var(--color-bg-section);
    padding-block: var(--space-3xl);
+.about__content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}   
 
 
 
