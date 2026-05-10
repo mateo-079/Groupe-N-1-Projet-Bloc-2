@@ -5,15 +5,15 @@
 
 /* --- Variables globales --- */
 :root {
-  /* Palette */
-  --color-bg:         #0a0a14;
-  --color-surface:    #12122a;
-  --color-surface-2:  #1a1a35;
-  --color-accent:     #6c63ff;
-  --color-accent-2:   #00d4aa;
-  --color-text:       #e8e8f0;
-  --color-text-muted: #8888aa;
-  --color-border:     #2a2a4a;
+  /* Palette — Océan Profond */
+  --color-bg:         #020b12;
+  --color-surface:    #051520;
+  --color-surface-2:  #081e2c;
+  --color-accent:     #00cfff;
+  --color-accent-2:   #0af0c0;
+  --color-text:       #e0f5ff;
+  --color-text-muted: #2e6880;
+  --color-border:     #0a2a3a;
   --color-white:      #ffffff;
 
   /* Typographie */
