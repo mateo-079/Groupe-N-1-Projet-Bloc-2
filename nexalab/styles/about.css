@@ -2,3 +2,19 @@
    about.css — Section À propos / Mission
    Responsabilité : .about, .about__content, .about__text, .about__visual
    ============================================================ */
+
+.about {
+   background-color: var(--color-bg-section);
+   padding-block: var(--space-3xl);
+
+
+
+
+
+
+
+
+
+
+
+} 
