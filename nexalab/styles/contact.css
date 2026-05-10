@@ -2,3 +2,9 @@
    contact.css — Section Formulaire de contact
    Responsabilité : .contact, .contact__form, .form-group, inputs, textarea
    ============================================================ */
+.contact__content{
+   background-color: var(--color-surface);
+   padding: 50px 0;
+   display:flex;
+   justify-content: center;
+   }
