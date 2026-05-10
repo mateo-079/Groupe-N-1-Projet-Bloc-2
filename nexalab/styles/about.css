@@ -25,6 +25,22 @@
   padding: var(--space-xl);
 }
 
+.about__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+}
+
+
+.about__description {
+  font-size: var(--fs-base);
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+  margin-bottom: var(--space-sm);
+}
+
 
 
 
