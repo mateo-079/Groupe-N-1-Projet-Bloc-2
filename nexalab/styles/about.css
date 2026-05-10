@@ -87,6 +87,33 @@
 }
 
 
+@media (max-width: 1024px) {
+  .about__content {
+    gap: 2rem;
+  }
+
+  .about__visual {
+    flex: 0 0 42%;
+  }
+}
+
+/* Mobile (≤ 767px) */
+@media (max-width: 767px) {
+  .about__content {
+    flex-direction: column;
+  }
+
+  .about__visual {
+    flex: unset;
+    width: 100%;
+  }
+
+  .about__visual img {
+    height: 260px;
+  }
+}
+
+
 
 
 
