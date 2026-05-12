@@ -61,10 +61,64 @@
    font-style: normal;
    font-size: var(--font-size-md);
    font-family: var(--font-main);
+   font-weight: 700;
 }
 .team-card__role{
    font-style: normal;
    font-size: var(--font-size-md);
    font-family: var(--font-main);
    color: var(--color-accent-2);
+   font-size: var(--font-size-sm);
+}
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* Tablette (≤ 1024px) */
+@media (max-width: 1024px) {
+  .team {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .team__grid {
+    gap: var(--space-lg); /* réduit l'espace entre les cartes */
+  }
+
+  .team-card__avatar {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .team {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .team__grid {
+    flex-wrap: wrap; /* permet aux cartes de passer à la ligne */
+    gap: var(--space-md);
+  }
+
+  .team-card {
+    width: calc(50% - var(--space-md)); /* 2 cartes par ligne */
+  }
+
+  .team-card__avatar {
+    width: 60px;
+    height: 60px;
+    font-size: var(--font-size-md);
+  }
+
+  .team__title {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* Très petit mobile (≤ 400px) */
+@media (max-width: 400px) {
+  .team-card {
+    width: 100%; /* 1 carte par ligne */
+  }
 }
