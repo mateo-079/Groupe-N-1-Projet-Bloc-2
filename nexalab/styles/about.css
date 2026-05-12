@@ -2,9 +2,115 @@
    about.css — Section À propos / Mission
    Responsabilité : .about, .about__content, .about__text, .about__visual
    ============================================================ */
-.about{
-   background-color: bisque;
-   padding: 50px 0;
-   display:flex;
-   margin : 25px;
+.about {
+   background-color: var(--color-bg-section);
+   padding-block: var(--space-3xl);
 }
+
+.about__content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.about__text {
+  flex: 1;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+}
+
+.about__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+}
+
+
+.about__description {
+  font-size: var(--fs-base);
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+  margin-bottom: var(--space-sm);
+}
+
+.about__visual {
+  flex: 0 0 45%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.about__visual img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.about__text {
+  animation: slideFromLeft 0.8s ease forwards;
+}
+
+.about__visual {
+  animation: slideFromRight 0.8s ease forwards;
+}
+
+
+@media (max-width: 1024px) {
+  .about__content {
+    gap: 2rem;
+  }
+
+  .about__visual {
+    flex: 0 0 42%;
+  }
+}
+
+/* Mobile (≤ 767px) */
+@media (max-width: 767px) {
+  .about__content {
+    flex-direction: column;
+  }
+
+  .about__visual {
+    flex: unset;
+    width: 100%;
+  }
+
+  .about__visual img {
+    height: 260px;
+  }
+}
+
+
+
