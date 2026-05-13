@@ -79,3 +79,25 @@
    font-size: var(--fs-xs);
    color : var(--color-text-muted);
 }
+
+@media (max-width:1024px) {
+   .footer__top{
+     flex-wrap: wrap;
+     gap: var(--space-xl);
+   }   
+
+   .footer__brand {
+   flex: 0 0 100%;
+   }
+}
+
+@media (max-width: 1024px) {
+   .footer__top{
+      flex-direction:comlumn;
+      gap : var(--space-Ig);
+   }
+   .footer__bottom {
+      text-align: left;
+   }
+   
+}
