@@ -66,3 +66,16 @@
    color: var(--color-text-secondary);
    line-height: 1.6;
 }
+
+.footer bottom{
+   border: top 1px solid var(--color-border);
+   padding: var (--space-md) var (--containe-pad);
+   max-width:var(--container-max);
+   margin-inline:auto;
+   text-align:center;
+}
+
+.footer__bottom p {
+   font-size: var(--fs-xs);
+   color : var(--color-text-muted);
+}
