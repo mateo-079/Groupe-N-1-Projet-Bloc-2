@@ -2,3 +2,123 @@
    team.css — Section Équipe
    Responsabilité : .team, .team__grid, .team-card
    ============================================================ */
+.team{
+   background-color: var( --color-surface);
+   padding: var(--space-2xl) var(--space-xl);/*permet de définir un espace entre les éléments à l'intérieur de la section et la section elle même*/
+  border: 1px solid var(--color-border);/*rend visible les bordures de la section*/
+}
+.team__header{
+   margin-bottom: var(--space-2xl);
+   text-align: center;
+
+}
+.team__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--font-size-2xl);
+  color: var(--color-text);
+}
+.team__subtitle{
+   color: var(--color-text-muted);
+}
+.team__grid {
+  display: flex;/* aligne les cartes côte à côte */
+  justify-content: center; /* centre les cartes par rapport au conteneur*/
+  gap: var(--space-lg);/*petit espace entre les cartes*/
+}
+.team-card {
+  display: flex;
+  flex-direction: column; /* empile avatar, nom et rôle verticalement */
+  align-items: center; /* centre tout horizontalement */
+  text-align: center;
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  gap: var(--space-sm); /* espace entre avatar, nom et rôle */
+  transition: var(--transition); /* transition douce au hover */
+}
+
+.team-card:hover {
+  border-color: var(--color-accent); /* bordure violette au hover */
+  transform: translateY(-6px); /* légère élévation au hover */
+}
+
+.team-card__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: var(--color-surface-2);
+  border: 2px solid var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+}
+.team-card__name{
+   font-style: normal;
+   font-size: var(--font-size-md);
+   font-family: var(--font-main);
+   font-weight: 700;
+}
+.team-card__role{
+   font-style: normal;
+   font-size: var(--font-size-md);
+   font-family: var(--font-main);
+   color: var(--color-accent-2);
+   font-size: var(--font-size-sm);
+}
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* Tablette (≤ 1024px) */
+@media (max-width: 1024px) {
+  .team {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .team__grid {
+    gap: var(--space-lg); /* réduit l'espace entre les cartes */
+  }
+
+  .team-card__avatar {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .team {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .team__grid {
+    flex-wrap: wrap; /* permet aux cartes de passer à la ligne */
+    gap: var(--space-md);
+  }
+
+  .team-card {
+    width: calc(50% - var(--space-md)); /* 2 cartes par ligne */
+  }
+
+  .team-card__avatar {
+    width: 60px;
+    height: 60px;
+    font-size: var(--font-size-md);
+  }
+
+  .team__title {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* Très petit mobile (≤ 400px) */
+@media (max-width: 400px) {
+  .team-card {
+    width: 100%; /* 1 carte par ligne */
+  }
+}

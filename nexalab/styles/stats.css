@@ -2,3 +2,109 @@
    stats.css — Section Chiffres clés
    Responsabilité : .stats, .stats__grid, .stat-card
    ============================================================ */
+
+
+/* ========================================
+   05 — CHIFFRES CLÉS
+   ======================================== */
+
+.stats {
+    padding: var(--space-2xl) var(--space-xl);
+    background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-2) 100%);
+}
+
+.stats__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+
+/* Carte individuelle */
+
+.stat-card {
+    background: rgba(108, 99, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl) var(--space-lg);
+    text-align: center;
+    transition: transform var(--transition), background var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    background: rgba(108, 99, 255, 0.14);
+}
+
+
+/* Nombre */
+
+.stat-card__number {
+    display: block;
+    font-size: var(--font-size-4xl);
+    font-weight: 900;
+    color: var(--color-white);
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: var(--space-xs);
+    /* Dégradé sur le texte */
+    background: linear-gradient(135deg, var(--color-text) 0%, var(--color-text-muted) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+/* Label */
+
+.stat-card__label {
+    display: block;
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+
+/* Ligne décorative sous le nombre */
+
+.stat-card::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-accent-2), transparent);
+    border-radius: var(--radius-sm);
+    margin: var(--space-sm) auto 0;
+}
+
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 900px) {
+    .stats {
+        padding: var(--space-xl) var(--space-lg);
+    }
+    .stats__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .stats__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-sm);
+    }
+    .stat-card {
+        padding: var(--space-lg) var(--space-sm);
+    }
+    .stat-card__number {
+        font-size: var(--font-size-3xl);
+    }
+}
