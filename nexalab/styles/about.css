@@ -41,7 +41,8 @@
 }
 
 .about__visual {
-  flex: 0 0 45%;
+  flex: 0 0 420px;
+  max-width: 420px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
