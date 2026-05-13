@@ -34,3 +34,35 @@
    line-height: 1.6;
    max-width: 220 px;
 }
+
+.footer__nav,.footer__social,.footer__contact{
+   display:flex;
+   flex-direction: column;
+   gap: var(--space-sm);
+   flex: 1;
+}
+
+.footer__nav h4,.footer__social h4,footer__contact h4 {
+   font-family: var(--font-display);
+   font-size: var(--fs-sm);
+   font-weight: 700;
+   color:var(--color-text-primary);
+   margin-bottom: var(--space-xs);
+}
+
+.footer__nav a,.footer__social a{
+   font-size: var(--fs-sm);
+   color: var(--color-text-secondary);
+   transition: color var(--transition-fast);
+}
+
+.footer__nav a:hover,.footer__social a:hover{
+   color: var(--color-accent);
+
+}
+
+.footer--contact p{
+   font-size: var(--fs-sm);
+   color: var(--color-text-secondary);
+   line-height: 1.6;
+}
