@@ -1,0 +1,81 @@
+/* ============================================================
+   components/buttons.css — Boutons réutilisables
+   Responsabilité : styles partagés de TOUS les boutons du site
+   Utilisation : ajouter .btn + un modificateur sur l'élément HTML
+   
+   Modificateurs disponibles :
+     .btn--gradient  → pill gradient accent→accent-2 (nav, hero, footer)
+     .btn--solid     → carré arrondi gradient (formulaire contact)
+     .btn--sm        → petit (padding réduit)
+     .btn--md        → moyen (nav, footer CTA)
+     .btn--lg        → grand (hero, contact)
+   ============================================================ */
+
+
+/* ── BASE ─────────────────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-main);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    opacity var(--transition);
+}
+
+
+/* ── VARIANTE : PILL GRADIENT ─────────────────────────────── */
+/* Utilisé par : .nav__cta · .hero__cta · .footer__cta-btn    */
+
+.btn--gradient {
+  background: linear-gradient(115deg, var(--color-accent), var(--color-accent-2));
+  color: var(--color-white);
+  border-radius: 999px;
+  box-shadow: 0 6px 28px rgba(108, 99, 255, 0.38);
+}
+
+.btn--gradient:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 36px rgba(108, 99, 255, 0.55);
+}
+
+
+/* ── VARIANTE : CARRÉ ARRONDI ─────────────────────────────── */
+/* Utilisé par : .contact__submit                              */
+
+.btn--solid {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+  color: var(--color-bg);
+  border-radius: var(--radius-sm);
+}
+
+.btn--solid:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+
+/* ── TAILLES ──────────────────────────────────────────────── */
+
+.btn--sm {
+  padding: 0.4rem 0.9rem;
+  font-size: var(--font-size-xs);
+}
+
+.btn--md {
+  padding: 0.55rem 1.2rem;
+  font-size: var(--font-size-sm);
+}
+
+.btn--lg {
+  padding: 0.9rem 2rem;
+  font-size: var(--font-size-md);
+}

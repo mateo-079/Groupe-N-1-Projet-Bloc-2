@@ -1,134 +1,103 @@
 /* ============================================================
    testimonials.css — Section Témoignages clients
    Responsabilité : .testimonials, .testimonials__grid, .testimonial-card
+   Surcharge de .card : border animée via ::before/::after
    ============================================================ */
+
 .testimonials {
-  background-color: var(--color-bg);/*l'arrière plan prend une couleur noir bleutée*/
-  padding: var(--space-2xl) var(--space-xl);/*permet de définir un espace entre les éléments à l'intérieur de la section et la section elle même*/
-  border: 1px solid var(--color-border);/*rend visible les bordures de la section*/
+  background-color: var(--color-bg);
+  padding: var(--space-2xl) var(--space-xl);
+  border: 1px solid var(--color-border);
 }
-/* Centre l'en-tête et crée un espace entre le texte et les cartes  */
+
 .testimonials__header {
   text-align: center;
   margin-bottom: var(--space-2xl);
 }
 
-/* Style du titre */
 .testimonials__title {
   font-size: var(--font-size-2xl);
   color: var(--color-text);
   font-weight: 700;
 }
-.testimonials__grid {
-  display: flex;/* empile verticalement les cartes*/
-  justify-content: center; /* centre les cartes par rapport au conteneur*/
-  gap: var(--space-md);/*petit espace entre les cartes*/
-}
-.testimonial-card{
-  max-width: 380px; /* empeche les cartes de devenir trop larges sur un grand écran*/
-  background: var(--color-surface);/* l'arrière plan de chaque carte est bleu nuit*/
-  display: flex; /* empile quote et author verticalement */
-  flex: 1;/* les cartes partagent équitablement l'espace disponible*/
-  flex-direction: column;/* empile les éléments du haut vers le bas */
-  position: relative; /* permet à ::before et ::after de se positionner par rapport à la carte */
-  overflow: hidden;/* rend invisible tout ce qui dépasse*/
-  border: 1px solid var(--color-border);/* on affiche la bordure supérieure*/
-  border-radius: var(--radius-md);/* on arrondit les coins*/
-  padding: var(--space-lg);/* on définit un espace entre la carte et les éléments qui y sont */
-  justify-content: space-between;/* définit un espace entre quote et author*/
-}
-.testimonial-card::before{
-  content: '';/* sert à afficher les changements qu'on va apporter */
-  position: absolute;/* sert à afficher l'effet uniquement sur la carte*/
-  width: 100px; /* on définit une largeur pour qu'elle convienne à notre carte*/
-  background-image: linear-gradient(180deg,var(--color-accent),var(--color-accent-2));/* on définit les couleurs qui seront à la base de notre fameux effet*/
-  height: 130%;
-  animation: rotBGimg 3s linear infinite; /* tour complet de 3s et sans arrêt*/
-  transition: all 0.2s linear;/*si une propriété change au survol alors le changement est fait délicatement  pendant 0.2s*/
-}
-/*La barre part de 0° et fait un tour complet à 360°*/
-@keyframes rotBGimg {
-  from {
-    transform: rotate(0deg);
-  }
 
-  to {
-    transform: rotate(360deg);
-  }
+.testimonials__grid {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+/* Surcharge .card — la border est gérée par l'animation ::before/::after */
+.testimonial-card {
+  max-width: 380px;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none; /* désactivée : remplacée par la border animée */
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, var(--color-accent), var(--color-accent-2));
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 .testimonial-card::after {
   content: '';
-  position: absolute; /* sert à afficher l'effet uniquement sur la carte*/
+  position: absolute;
   background: var(--color-surface);
-   inset: 3px; /* on définit la forme des bordures qui constituent notre animation*/
-  border-radius: calc(var(--radius-md) - 3px);/*on applique des bordures à cette partie*/
-
-
+  inset: 3px;
+  border-radius: calc(var(--radius-md) - 3px);
 }
-/*styles propres à la partie qui contient les témoignages en question*/
-.testimonial-card__quote{
- position: relative;
-  z-index: 1;/* pour afficher le texte par dessus  le ::after qui recouvre toute la carte */
+
+.testimonial-card__quote {
+  position: relative;
+  z-index: 1;
   font-size: var(--font-size-sm);
   color: var(--color-text);
   font-style: italic;
   line-height: 1.75;
   margin-bottom: var(--space-md);
 }
-/*style propre à la partie consacrée aux auteurs des témoignages*/
-.testimonial-card__author{
-position: relative;
- z-index: 1; /* pour afficher le texte par dessus  le ::after qui recouvre toute la carte */
- display: flex;
+
+.testimonial-card__author {
+  position: relative;
+  z-index: 1;
+  display: flex;
   flex-direction: column;
   gap: var(--space-xs);
   padding-top: var(--space-sm);
   border-top: 1px solid var(--color-border);
 }
-/*ici on met le texte en blanc et on l'accentue pour qu'il soit plus gras*/
+
 .testimonial-card__author strong {
   color: var(--color-text);
   font-size: var(--font-size-sm);
   font-weight: 700;
 }
-/*ici on met le texte en plus petit et on lui associe la couleur verte*/
+
 .testimonial-card__author span {
   color: var(--color-accent-2);
   font-size: var(--font-size-xs);
 }
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
 
-/* Tablette (≤ 1024px) */
 @media (max-width: 1024px) {
-  .testimonials {
-    padding: var(--space-xl) var(--space-lg);
-  }
-
-  .testimonials__grid {
-    gap: var(--space-sm);
-  }
-
-  .testimonial-card {
-    max-width: 320px;
-  }
+  .testimonials { padding: var(--space-xl) var(--space-lg); }
+  .testimonials__grid { gap: var(--space-sm); }
+  .testimonial-card { max-width: 320px; }
 }
 
-/* Mobile (≤ 768px) */
 @media (max-width: 768px) {
-  .testimonials {
-    padding: var(--space-xl) var(--space-md);
-  }
-
-  .testimonials__grid {
-    flex-direction: column; /* cartes empilées verticalement */
-    align-items: center;
-  }
-
-  .testimonial-card {
-    width: 100%;
-    max-width: 480px; /* limite la largeur sur mobile */
-  }
+  .testimonials { padding: var(--space-xl) var(--space-md); }
+  .testimonials__grid { flex-direction: column; align-items: center; }
+  .testimonial-card { width: 100%; max-width: 480px; }
 }

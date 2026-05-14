@@ -8,7 +8,11 @@
   <!-- 1. Socle global -->
   <link rel="stylesheet" href="styles/base.css">
 
-  <!-- 2. Sections -->
+  <!-- 2. Composants réutilisables -->
+  <link rel="stylesheet" href="styles/components/buttons.css">
+  <link rel="stylesheet" href="styles/components/cards.css">
+
+  <!-- 3. Sections -->
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/hero.css">
   <link rel="stylesheet" href="styles/about.css">
@@ -33,7 +37,7 @@
         <li><a href="#stats">Chiffres</a></li>
         <li><a href="#team">Équipe</a></li>
         <li><a href="#testimonials">Témoignages</a></li>
-        <li><a href="#contact" class="nav__cta">Nous contacter</a></li>
+        <li><a href="#contact" class="nav__cta btn btn--gradient btn--md">Nous contacter</a></li>
       </ul>
       <button class="nav__burger" aria-label="Menu">&#9776;</button>
     </nav>
@@ -46,7 +50,7 @@
     <div class="hero__content">
       <h1 class="hero__title">L'innovation technologique<br>au service de l'Afrique</h1>
       <p class="hero__subtitle">NexaLab conçoit des solutions numériques sur mesure pour les entreprises africaines qui veulent aller plus loin.</p>
-      <a href="#contact" class="hero__cta">Démarrer un projet</a>
+      <a href="#contact" class="btn btn--gradient btn--lg hero__cta">Démarrer un projet</a>
     </div>
     <div class="hero__visual">
       <!-- Placeholder visuel -->
@@ -85,37 +89,37 @@
     </div>
     <div class="services__grid">
 
-      <article class="service-card">
+      <article class="card service-card">
         <div class="service-card__icon">🤖</div>
         <h3 class="service-card__title">Intelligence Artificielle</h3>
         <p class="service-card__description">Modèles prédictifs, automatisation intelligente et systèmes de recommandation adaptés à vos données.</p>
       </article>
 
-      <article class="service-card">
+      <article class="card service-card">
         <div class="service-card__icon">📡</div>
         <h3 class="service-card__title">IoT & Systèmes embarqués</h3>
         <p class="service-card__description">Capteurs, réseaux connectés et dashboards temps réel pour piloter vos actifs physiques à distance.</p>
       </article>
 
-      <article class="service-card">
+      <article class="card service-card">
         <div class="service-card__icon">📊</div>
         <h3 class="service-card__title">Data & Analytics</h3>
         <p class="service-card__description">Collecte, traitement et visualisation de données pour des décisions fondées sur les faits.</p>
       </article>
 
-      <article class="service-card">
+      <article class="card service-card">
         <div class="service-card__icon">🌐</div>
         <h3 class="service-card__title">Développement Web</h3>
         <p class="service-card__description">Applications web performantes, interfaces utilisateur soignées et architectures robustes.</p>
       </article>
 
-      <article class="service-card">
+      <article class="card service-card">
         <div class="service-card__icon">🔒</div>
         <h3 class="service-card__title">Cybersécurité</h3>
         <p class="service-card__description">Audit, protection et conformité pour sécuriser vos systèmes et données sensibles.</p>
       </article>
 
-      <article class="service-card">
+      <article class="card service-card">
         <div class="service-card__icon">☁️</div>
         <h3 class="service-card__title">Cloud & Infrastructure</h3>
         <p class="service-card__description">Migration, déploiement et gestion d'infrastructures cloud scalables et économiques.</p>
@@ -130,22 +134,22 @@
   <section class="stats" id="stats">
     <div class="stats__grid">
 
-      <div class="stat-card">
+      <div class="card stat-card">
         <span class="stat-card__number">120+</span>
         <span class="stat-card__label">Projets livrés</span>
       </div>
 
-      <div class="stat-card">
+      <div class="card stat-card">
         <span class="stat-card__number">14</span>
         <span class="stat-card__label">Pays couverts</span>
       </div>
 
-      <div class="stat-card">
+      <div class="card stat-card">
         <span class="stat-card__number">48</span>
         <span class="stat-card__label">Partenaires actifs</span>
       </div>
 
-      <div class="stat-card">
+      <div class="card stat-card">
         <span class="stat-card__number">98%</span>
         <span class="stat-card__label">Clients satisfaits</span>
       </div>
@@ -163,25 +167,25 @@
     </div>
     <div class="team__grid">
 
-      <article class="team-card">
+      <article class="card team-card">
         <div class="team-card__avatar"></div>
         <h3 class="team-card__name">Kofi Mensah</h3>
         <p class="team-card__role">Directeur Technique</p>
       </article>
 
-      <article class="team-card">
+      <article class="card team-card">
         <div class="team-card__avatar"></div>
         <h3 class="team-card__name">Amina Diallo</h3>
         <p class="team-card__role">Lead Data Scientist</p>
       </article>
 
-      <article class="team-card">
+      <article class="card team-card">
         <div class="team-card__avatar"></div>
         <h3 class="team-card__name">Seun Adebayo</h3>
         <p class="team-card__role">Ingénieur IoT</p>
       </article>
 
-      <article class="team-card">
+      <article class="card team-card">
         <div class="team-card__avatar"></div>
         <h3 class="team-card__name">Fatou Ndiaye</h3>
         <p class="team-card__role">Responsable Design</p>
@@ -199,7 +203,7 @@
     </div>
     <div class="testimonials__grid">
 
-      <article class="testimonial-card">
+      <article class="card testimonial-card">
         <p class="testimonial-card__quote">
           "NexaLab a transformé notre chaîne logistique en 3 mois. Le ROI a dépassé toutes nos projections."
         </p>
@@ -209,7 +213,7 @@
         </footer>
       </article>
 
-      <article class="testimonial-card">
+      <article class="card testimonial-card">
         <p class="testimonial-card__quote">
           "Une équipe qui comprend vraiment les contraintes du terrain africain. Rare et précieux."
         </p>
@@ -219,7 +223,7 @@
         </footer>
       </article>
 
-      <article class="testimonial-card">
+      <article class="card testimonial-card">
         <p class="testimonial-card__quote">
           "Le dashboard IoT livré par NexaLab nous permet de piloter 200 capteurs depuis un seul écran."
         </p>
@@ -260,7 +264,7 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou votre besoin..." required></textarea>
         </div>
-        <button type="submit" class="contact__submit">Envoyer le message</button>
+        <button type="submit" class="contact__submit btn btn--solid btn--lg">Envoyer le message</button>
       </form>
     </div>
   </section>
@@ -277,7 +281,7 @@
         <h3>Prêt à transformer votre business ?</h3>
         <p>Parlons de votre projet — notre équipe vous répond sous 24h.</p>
       </div>
-      <a href="#contact" class="footer__cta-btn">Démarrer un projet →</a>
+      <a href="#contact" class="footer__cta-btn btn btn--gradient btn--md">Démarrer un projet →</a>
     </div>
 
     <!-- Colonnes -->
