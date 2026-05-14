@@ -2,14 +2,120 @@
    contact.css — Section Formulaire de contact
    Responsabilité : .contact, .contact__form, .form-group, inputs, textarea
    ============================================================ */
+.contact {
+   padding: var(--space-2xl) var(--space-md);
+}
+
 .contact__content {
-   background-color: var(--color-surface);
-   padding: 30px 0;
    display: flex;
-   justify-content: center;
+   gap: var(--space-xl);
+   max-width: var(--max-width);
+   margin: 0 auto;
+   align-items: flex-start;
+}
+
+.contact__intro {
+   flex: 1;
 }
 
 .contact__title {
-   background-color: rgb(160, 75, 75);
+   font-size: var(--font-size-3xl);
+   margin-bottom: var(--space-sm);
+   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
 
+.contact__description {
+   color: var(--color-text-muted);
+   font-size: var(--font-size-md);
+   line-height: 1.8;
+}
+
+.contact__form {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-sm);
+}
+
+.form-group {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+.form-group label {
+   font-size: var(--font-size-sm);
+   color: var(--color-accent-2);
+   font-weight: 500;
+   letter-spacing: 0.5px;
+}
+
+.contact__form input,
+.contact__form textarea {
+   background-color: var(--color-surface);
+   border: 1px solid transparent;
+   border-radius: var(--radius-sm);
+   padding: 14px 16px;
+   color: var(--color-text);
+   font-size: var(--font-size-md);
+   font-family: var(--font-main);
+   width: 100%;
+   outline: none;
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+   border-color: var(--color-accent-2);
+   box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.15);
+}
+
+.contact__form textarea {
+   resize: vertical;
+   min-height: 140px;
+}
+
+.contact__submit {
+   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+   color: var(--color-bg);
+   padding: 14px 32px;
+   border-radius: var(--radius-sm);
+   font-size: var(--font-size-md);
+   font-weight: 700;
+   cursor: pointer;
+   align-self: flex-start;
+   transition: var(--transition);
+}
+
+.contact__submit:hover {
+   opacity: 0.85;
+   transform: translateY(-2px);
+}
+
+.contact__form input::placeholder,
+.contact__form textarea::placeholder {
+   color: var(--color-text-muted);
+   font-size: var(--font-size-sm);
+}
+
+.contact__form input:-webkit-autofill {
+   -webkit-box-shadow: 0 0 0px 1000px var(--color-surface) inset;
+   -webkit-text-fill-color: var(--color-text);
+}
+
+.contact__form input:hover,
+.contact__form textarea:hover {
+   border-color: var(--color-accent);
+   transition: var(--transition);
+}
+
+@media (max-width: 768px) {
+   .contact__content {
+      flex-direction: column;
+   }
+
+   .contact__submit {
+      align-self: stretch;
+   }
 }
