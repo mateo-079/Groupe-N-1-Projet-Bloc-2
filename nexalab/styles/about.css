@@ -39,8 +39,8 @@
 
 
 .about__description {
-  font-size: var(--fs-base);
-  color: var(--color-text-secondary);
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
   line-height: 1.75;
   margin-bottom: var(--space-sm);
 }
