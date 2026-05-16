@@ -80,12 +80,10 @@
   gap: 8px;
 }
 
-.footer__logo {
-  font-family: var(--font-main);
-  font-size: var(--font-size-xl);
-  font-weight: 800;
-  color: var(--color-white);
-  letter-spacing: -0.02em;
+.footer__logo img {
+  height: 30px;
+  width: auto;
+  display: block;
 }
 
 .footer__logo span {
