@@ -110,9 +110,17 @@
     flex-direction: column;
   }
 
+  .about__text {
+    flex: unset;
+    width: 100%;
+    min-width: 0;
+  }
+
   .about__visual {
     flex: unset;
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .about__visual img {

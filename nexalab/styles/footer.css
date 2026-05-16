@@ -1,43 +1,4 @@
-/* ============================================================
-   footer.css — Pied de page
-   Responsabilité : .footer, .footer__top, .footer__bottom, liens sociaux
-   ============================================================ */
-/* =============================================================
-   footer.css — Pied de page
-   NexaLab · Projet Intégrateur · Bloc 2 · IFRI L1
-   ============================================================= */
-
-
-/* =============================================================
-   footer.css — Pied de page
-   NexaLab · Projet Intégrateur · Bloc 2 · IFRI L1
-   ============================================================= */
-
-
-
-/* =============================================================
-   footer.css — Pied de page
-   NexaLab · Projet Intégrateur · Bloc 2 · IFRI L1
-   ============================================================= */
-
-
 /* ── 1. WRAPPER ─────────────────────────────────────────────── */
-/* =============================================================
-   footer.css — Pied de page
-   NexaLab · Projet Intégrateur · Bloc 2 · IFRI L1
-   ============================================================= */
-
-
-/* ── 1. WRAPPER ─────────────────────────────────────────────── */
-/* =============================================================
-   footer.css — Pied de page
-   NexaLab · Projet Intégrateur · Bloc 2 · IFRI L1
-   ============================================================= */
-
-
-/* ── 1. WRAPPER ─────────────────────────────────────────────── */
-
-
 /* =============================================================
    footer.css — Pied de page
    NexaLab · Projet Intégrateur · Bloc 2 · IFRI L1
@@ -255,20 +216,19 @@
   }
 
   .footer__cols {
-    flex-wrap: wrap;
-  }
-
-  .footer__brand {
-    flex: 0 0 100%;
-  }
-}
-
-
-@media (max-width: 480px) {
-  .footer__cols {
     flex-direction: column;
   }
 
+  .footer__brand,
+  .footer__nav,
+  .footer__contact {
+    flex: unset;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
   .footer__bottom {
     text-align: left;
   }
